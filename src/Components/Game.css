@@ -1,0 +1,35 @@
+.Game {
+    display:inline-block;
+    margin: 2%;
+    
+}
+body {
+    background-color: #458BD2;
+}
+.Napis1{
+    color:black;
+    font-size:60px;
+    margin-bottom:2%;
+}
+.Napis2{
+    margin-top: 2%;
+    text-align: right;
+    font-size:20px
+}
+.Napis3{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: left;
+    font-size:20px
+}
+.Fields{
+    display:flex;
+    border: 2px solid black;
+}
+.Row {
+    display:inline;
+}
+.startButton{
+    padding: 5px;
+    margin-bottom: 4%;
+}

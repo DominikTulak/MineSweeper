@@ -1,0 +1,13 @@
+.Tile {
+    border: 1px solid black;
+    padding: 5px;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.Tile:hover {
+    background-color: lightgray;
+    cursor:pointer;
+}
