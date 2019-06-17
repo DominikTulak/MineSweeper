@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import Tile from './Tile';
+import {connect} from "react-redux";
 import './Game.css';
+import { actionCreators } from '../store/Tiles';
 let Tiles = [];
 let Mines = [];
 let w = 1;
@@ -136,7 +138,7 @@ class Game extends Component {
         //console.log("tohle");
         //console.log(outp);
         //console.log("update");
-        this.setState({out: outp});
+        this.props.changeRender(outp);
     }
     
     
@@ -176,7 +178,7 @@ class Game extends Component {
           Odkrytých políček: {revealedTiles}
           </div>
           <div className="Fields">
-              {this.state.out}
+              {this.props.rend}
           </div>
           <div className="Napis2">
             Dominik Tulak, 2019
@@ -185,4 +187,10 @@ class Game extends Component {
     );
   }
 }
-export default Game;
+export default connect(
+  state => {
+    return {
+      rend: state.render
+    }
+  }, {changeRender: actionCreators.changeRender}
+)(Game);

@@ -19,8 +19,8 @@ class Tile extends Component {
     render() {
     
     return (
-      <div className="Tile" onClick={(e) => {e.preventDefault(); this.handleClick(); }} style={{background:!this.props.isVisible?'#C2DFFF':this.props.isMine?this.props.endGame?'red':'white':'white'}}>{this.props.isVisible? (this.props.number == 0 || this.props.number == -1)?'':this.props.number:this.props.isMine?"M":"-"}</div>
-      //<div className="Tile" onClick={(e) => {e.preventDefault(); this.handleClick(); }} style={{background:!this.props.isVisible?'#38ACEC':this.props.isMine?this.props.endGame?'red':'white':'white'}}>{this.props.isVisible? (this.props.number == 0 || this.props.number == -1)?'':this.props.number:""}</div>
+      //<div className="Tile" onClick={(e) => {e.preventDefault(); this.handleClick(); }} style={{background:!this.props.isVisible?'#C2DFFF':this.props.isMine?this.props.endGame?'red':'white':'white'}}>{this.props.isVisible? (this.props.number == 0 || this.props.number == -1)?'':this.props.number:this.props.isMine?"M":"-"}</div>
+      <div className="Tile" onClick={(e) => {e.preventDefault(); this.handleClick(); }} style={{background:!this.props.isVisible?'#38ACEC':this.props.isMine?this.props.endGame?'red':'white':'white'}}>{this.props.isVisible? (this.props.number == 0 || this.props.number == -1)?'':this.props.number:""}</div>
     );
     
   }
